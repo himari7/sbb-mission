@@ -4,7 +4,6 @@ import com.example.projext2311.question.Question;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-import org.springframework.data.annotation.CreatedDate;
 
 import java.time.LocalDateTime;
 
@@ -19,7 +18,6 @@ public class Answer {
     @Column(columnDefinition = "TEXT")
     private String content;
 
-    @CreatedDate
     private LocalDateTime createDate;
 
     @ManyToOne

@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
+
 @RequestMapping("/question")
 @RequiredArgsConstructor
 @Controller
@@ -21,6 +22,7 @@ public class QuestionController {
         model.addAttribute("questionList", questionList);
         return "question_list";
     }
+
     @GetMapping(value = "/detail/{id}")
     public String detail(Model model, @PathVariable("id") Integer id) {
         Question question = this.questionService.getQuestion(id);
